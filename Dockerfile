@@ -6,7 +6,8 @@ RUN echo deb http://ftp.debian.org/debian jessie-backports main > /etc/apt/sourc
 
 RUN apt-get update
 RUN apt-get install -y fonts-noto fonts-noto-cjk
-RUN fc-cache -fv
+
+RUN chrome --headless --disable-gpu
 
 WORKDIR /src
 
